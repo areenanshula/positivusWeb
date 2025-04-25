@@ -1,0 +1,589 @@
+* {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+:root {
+    --font-color: #000000;
+    --empty-color: #ffffff;
+    --active-color: #494949;
+    --background-green: #b9ff66;
+    --gray-background-color: #F3F3F3;
+    --button-background-color: #191A23;
+    --footer-background-color: #292A32;
+    --contact-background-color: #F3F3F3;
+  } 
+  
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.arrowBtn {
+  background-color: var(--background-green) !important;
+  border: 1px solid var(--button-background-color) !important;
+  color: var(--font-color);
+  font-size: 1rem;
+}
+
+
+.form-con {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.form-con.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Case Uses */
+
+.case-study-container {
+  overflow-x: auto;
+  display: flex;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+}
+
+.case-study-container::-webkit-scrollbar {
+  display: none; 
+}
+
+.case-study-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.case-study-card {
+  min-width: 70%;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  scroll-snap-align: start;
+}
+.case-study-link {
+  color: var(--background-green);
+  text-decoration: none;
+}
+
+
+/* ===================================================== */
+
+/* Proposal card */
+
+.proposal-card {
+  background-color: var(--gray-background-color);
+}
+.image-container {
+  position: relative;
+  width: 300px;
+  overflow: visible; 
+}
+.proposal-text-card {
+  padding: 3.5rem;
+}
+.image-container img {
+  position: absolute;
+  top: -20px;
+  left: 220px;
+  width: 120%;
+}
+
+
+/* ====================================================================== */
+
+/* Service Card Styles */
+.service-card {
+    border: 1px var(--font-color) solid;
+    border-bottom: 5px var(--font-color) solid;
+    border-radius: 45px;
+    background-color: #f8f9fa; /* Light card background */
+    transition: transform 0.3s;
+  }
+  .service-card-for-green {
+    background-color: var(--background-green);
+  }
+  .service-card-for-dark {
+    background-color: var(--button-background-color);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .dark-card {
+    background-color: var(--button-background-color); /* Dark card background */
+    color: white;
+    border-bottom: 1px;
+  }
+  .green-card {background-color: var(--background-green);}
+
+
+/* Highlight for services cards */
+.highlight-white {
+  background-color: var(--empty-color);
+}
+.highlight-green {
+  background-color: var(--background-green);
+}
+.service-main-card {
+  margin-bottom: 7rem !important;
+}
+.service-card-img {
+  width: 80%;
+}
+.service-span-green {
+  background-color: var(--background-green);
+  padding: 2px 5px 2px;
+}
+.service-span-white {
+  background-color: var(--empty-color);
+  padding: 2px 5px 2px;
+}
+.link-for {
+  margin-top: 80px;
+}
+/* ===================================================================== */
+
+/* Contact form */
+.contact-main-card {
+  background-color: var(--contact-background-color);
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+.radio div:first-child{
+  margin-right: 4rem;
+}
+.control-btn, .control-ex-btn {
+  width: 100%;
+  padding: 1rem 0 1rem;
+  background-color: var(--button-background-color);
+  color: var(--empty-color);
+  border-radius: 14px;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+.contact-head div h6 span:first-child {
+  font-size: 2rem;
+  background-color: var(--background-green);
+}
+.contact-head div:first-child {
+  width: 18rem;
+}
+.contact-head {
+  margin-top: 5rem;
+}
+.contact-fault {
+  padding: 1px !important;
+}
+/* ========================================================= */
+
+/* Testimonial */
+
+.testimonial-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.testimonial-title {
+  font-size: 24px;
+  font-weight: bold;
+  background: #bfff00;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.testimonial-subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  min-width: 60%;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  scroll-snap-align: start;
+  margin: 10px;
+  position: relative;
+}
+
+
+.testimonial-text {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.testimonial-name {
+  color: var(--background-green);
+  text-align: left;
+}
+
+.testimonial-role {
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: left;
+}
+
+/* Arrows */
+.prev, .next {
+  cursor: pointer;
+  background: none;
+}
+
+/* Pagination */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #bfff00;
+}
+
+/* =========================================================== */
+
+/* Footer Styles */
+.footer-input {
+  padding: 1.6rem 0 1.6rem;
+  border: 1px solid var(--empty-color);
+  background-color: var(--footer-background-color);
+}
+.footer-input::placeholder {
+  color: var(--empty-color);
+}
+.footer-btn {
+  padding: 1.4rem 0 1.4rem;
+}
+.footer-card {
+  background-color: var(--footer-background-color);
+}
+.footer-contact h6{
+  margin-bottom: 1.4rem;
+}
+.footer-contact h6:last-child{
+  margin-bottom: 0rem;
+}
+.footer-contact h6 span{
+  background-color: var(--background-green);
+  padding: 0.3rem;
+  border-radius: 7px;
+}
+.footer-full {
+  margin-top: 10rem !important;
+}
+/* ========================================================================= */
+
+/* Team section */
+
+.team-head h1 span{
+  background-color: var(--background-green);
+}
+#team {
+  margin-top: 3rem;
+}
+.team-card {
+  border: 1px var(--font-color) solid;
+  border-bottom: 5px solid var(--font-color);
+}
+
+/* ========================================================================= */
+
+/* workprocess */
+
+.work-img {
+  width: 50px;
+}
+.workdrop {
+  border-bottom: 5px solid var(--font-color) !important;
+}
+.work-head {
+  background-color: var(--background-green);
+}
+
+/* ========================================================================= */
+
+/* image-roll */
+.imageRoll {
+  filter: grayscale(100%);
+}
+/* ========================================================================= */
+
+
+/* Font sizes */ 
+.l-10 {
+  font-size: 1rem;
+}
+.f-1, .f-2 {
+  font-size: 1.2rem;
+}
+ .f4 {
+  font-size: 1.1rem;
+ }
+ .c-1 {
+  font-size: 1.2rem;
+ }
+ .cs-1 {
+  font-size: 18px;
+ }
+ .sub-1 {
+  font-size: 1.1rem;
+ }
+ .N-1 {
+  font-size: 2em;
+ }
+
+
+/* Lap screen size */
+
+@media (max-width: 1200px) {
+
+  .footer-btn {
+    padding: 1.2rem 0 1.2rem !important;
+  }
+  .footer-input {
+    padding: 1.4rem 1rem 1.4rem !important;
+  }
+  .image-container img {
+    position: absolute;
+    top: -20px;
+    left: 150px;
+    width: 120%;
+  }
+
+  .testimonial-card {
+    min-width: 60%;
+  }
+  .service-card-img {
+    width: 50% !important;
+    margin-left: auto;
+  }
+
+
+
+
+
+
+  .l-lg-10 {
+    font-size: 0.8rem;
+  }
+  .f-lg-1 {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================================ */
+
+/* Tablet screen size */
+
+@media (max-width: 992px) {
+  .footer-input {
+    padding: 1.2rem 1rem 1.2rem !important;
+    margin-bottom: 1rem;
+  }
+  .footer-contact {
+    display: block;
+    text-align: center;
+  }
+  .footer-contact h6:first-child {
+    margin-bottom: 3rem;
+  }
+  .footer-card {
+    margin-top: 3rem;
+  }
+  .footer-nav {
+    flex-direction: column;
+  }
+  .footer-logo-1 {
+    text-align: center !important;
+    margin-bottom: 3rem;
+  }
+  .footer-logo {
+    width: 30% !important;
+  }
+  .footer-nav-links {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .footer-icon-1 {
+    display: none;
+  }
+  .contact-img {
+    display: none;
+  }
+  .footer-full {
+    margin-top: 6rem !important;
+  }
+  .contact-head div:first-child {
+    width: 100% !important;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .theme {
+    text-align: center;
+  }
+  .image-container {
+    display: none
+  }
+  .testimonial-card {
+    min-width: 70%;
+  }
+  .team-head {
+    text-align: center;
+  }
+  .workh1{
+    text-align: center;
+  }
+  .service-card-img {
+    width: 60% !important;
+  }
+
+
+  .cs-1 {
+    font-size: 12px;
+   }
+  .l-lg-10 {
+    font-size: 1rem;
+  }
+}  
+
+
+
+
+/* ============================================================================ */
+
+/* Mobile screen size */
+@media (max-width: 758px) {
+  .footer-footer {
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .footer-full {
+    border-radius: 0 !important;
+  }
+  .footer-logo {
+    width: 40% !important;
+  }
+  .control-btn {
+    display: none;
+  }
+  .control-ex-btn {
+    display: block !important;
+    margin-top: auto !important;
+  }
+  .contact-head {
+    margin-top: 3rem;
+  }
+  .proposal-btn {
+    margin: 0 auto !important;
+    display: block !important;
+    margin-top: 2rem !important;
+  }
+  .testimonial-card {
+    min-width: 80%;
+  }
+  .service-card-img {
+    width: 50% !important;
+  
+  }
+
+
+  
+
+
+
+
+
+  .f-md-4 {
+    font-size: 0.9rem;
+  } 
+}
+/* ============================================================================ */
+
+/* Small screen size */
+@media (max-width: 576px) {
+  .footer-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo {
+    width: 50% !important;
+  }
+  .case-study-card {
+    min-width: 90%;
+  }
+  .testimonial-card {
+    min-width: 100%;
+  }
+  .service-card-img {
+    width: 70% !important;
+  }
+}
+
+/* Extra small size */
+
+@media (max-width: 470px) {
+  .footer-input {
+    padding: 1rem 1rem 1rem !important;
+  }
+  .footer-btn {
+    padding: 1rem 0 1rem !important;
+  }
+  .footer-card {
+    padding: 1.7rem 1.7rem 1.7rem !important;
+  }
+  .footer-main-card {
+    padding: 1.4rem 1.4rem 1.4rem !important;
+  }
+
+
+
+
+
+  .testimonial-text {
+    font-size: 14px !important;
+  }
+
+  .l-10 {
+    font-size: 0.8rem;
+  }
+  .f-1 {
+    font-size: 1rem;
+  }
+  .f-sm-4 {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+

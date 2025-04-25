@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --font-color: #000000;
+  --empty-color: #ffffff;
+  --active-color: #494949;
+  --background-green: #b9ff66;
+  --gray-background-color: #F3F3F3;
+  --button-background-color: #191A23;
+} 
+body {
+  padding: 40px 90px 0px 90px;
+}
+
+nav {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+}
+nav ul{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--font-color);
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.navbar {
+  padding: 0;
+  height: 100%;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+nav .navbar li .R-link {
+  height: 100%;
+}
+nav li .R-link{
+  border: 1px solid #000000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  padding: 18px 30px;
+}
+nav .sidebar li .R-link{
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  padding: 10px 0px; 
+  justify-content: center;
+  width: 70%;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: var(--empty-color);
+  box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 999;
+  padding: 0px 10px;
+}
+.sidebar li:first-child{
+  padding-top: 20px;
+}
+.sidebar li {
+  width: 100%;
+  padding-top: 30px;
+}
+.sidebar img {
+  width: 150px;
+}
+.menuButton {
+  display: none;
+}
+.bookingLink {
+  text-decoration: none;
+  color: var(--empty-color);
+  background-color: var(--font-color);
+  border-radius: 14px;
+  padding: 18px 30px;
+  font-size: 18px;
+}
+.bookingLink:active {
+  background-color: var(--active-color);
+}
+.bookingLinkMobile{
+  text-decoration: none;
+  color: var(--empty-color);
+  background-color: var(--font-color);
+  border-radius: 14px;
+  padding: 18px 80px;
+  font-size: 18px;
+}
+.mobile {
+  display: none;
+}
+.partners {
+  padding-top: 30px;
+}
+
+
+/* Service Card Styles */
+.service-card {
+  border: 1px var(--font-color) solid;
+  border-bottom: 5px var(--font-color) solid;
+  border-radius: 45px;
+  background-color: #f8f9fa; /* Light card background */
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.dark-card {
+  background-color: var(--button-background-color); /* Dark card background */
+  color: white;
+  border-bottom: 1px;
+}
+.green-card {background-color: var(--background-green);}
+
+/* Scroll-to-up */
+/* Scroll-to-Top Button Styles */
+.scroll-to-top {
+  position: fixed; /* Sticks to the screen */
+  bottom: 30px;    /* Distance from the bottom */
+  right: 30px;     /* Distance from the right */
+  width: 50px;     /* Round shape size */
+  height: 50px;    /* Round shape size */
+  border-radius: 50%; /* Makes it round */
+  background-color: var(--font-color); /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  font-size: 20px; /* Font size for the arrow */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+/* Button hover effect */
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.grey-middle-card {
+  background-color: var(--gray-background-color);
+  border-radius: 45px;
+}
+.grey-img {width: 350px; height: 350px; max-width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */ 
+nav li .R-link:hover {
+  background-color: var(--font-color);
+  color: #ffffff;
+  cursor: pointer;
+}
+nav li .R-link:active {
+  background-color: var(--active-color);
+}
+
+/* font Size */
+.L-1 {font-size: 20px; }
+.L-2 {font-size: 52px; line-height: 76px;}
+.L-3 {font-size: 18px;}
+
+
+/* Font Responsive */
+@media (max-width: 1130px) {
+  .Lt-1 {font-size: 16px;}
+  .Lt-2 {font-size: 46px; line-height: 60px;}
+}
+
+@media (max-width: 820px) {
+  .Lm-2 {font-size: 44px;}
+}
+
+@media (max-width: 576px) {
+
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1250px) {
+  .sidebar img, .navbar img {
+    width: 180px;
+  }
+  nav a {
+    padding: 0 20px;
+  }
+  .groupImg {
+    width: 480px;
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+@media (max-width:1050px) {
+  .navbar img {
+    width: 130px;
+  }
+  body {
+    padding: 10px 20px 0 20px;
+  }
+  .navbar .R-link {
+    padding: 5px 10px;
+  }
+  nav {
+    height: 64px;
+  }
+  .groupImg {
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+}
+@media (max-width: 800px) {
+  .hidenOnMobile {
+    display: none;
+  }
+  .menuButton {
+    display: block;
+  }
+  body {
+    padding: 10px 20px 0 20px;
+  }
+  .groupImg {
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+  }
+  .L-3, .bookingLink {display: none;}
+  .mobile {display: block;}
+  .topic {
+    display: flex;
+    justify-content: center;
+  }
+  .card-body a h5{display: none;}
+}
+@media (max-width: 576px) {
+  .groupImg {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    float: none;
+  }
+  .L-2 {line-height: 55px; margin-bottom: 30px;}
+  .gray-button-card div img {display: none;}
+}
